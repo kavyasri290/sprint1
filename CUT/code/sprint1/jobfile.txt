@@ -1,0 +1,4 @@
+J1,cutting,M1,20,dffd
+J2,polish,M2,35,ghhn
+J3,bending,M2,45,lcient
+J4,pattern,M3,50,bvcn

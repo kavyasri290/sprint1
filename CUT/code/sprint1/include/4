@@ -1,0 +1,18 @@
+#ifndef BEND_H
+#define BEND_H
+#include<job.h>
+
+class Bend : public Job{
+	public:
+		Bend(){};
+		Bend(string,string,string,int,string,string,string);
+		~Bend(){};
+		string getShape();
+		string getNoOfBends();
+		 void displayJob() const;
+	private:
+		string shape;
+		string noOfBends;
+};
+#endif
+
