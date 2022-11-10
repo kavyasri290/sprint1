@@ -20,7 +20,7 @@ using namespace std;
 
 //-----------------------------------------------------------------------------
 
-class TestStudent : public CppUnit::TestFixture
+class TestSchedule : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestSchedule);
     CPPUNIT_TEST(displayCut);
