@@ -138,7 +138,16 @@ void Thread::thread1(){
 	}catch(...){
 		cout<<"invalid file";
 	}
-   	      
+	m1.lock();
+	for(int i=0;i<=size(s1);i++)
+	{
+		cout<<s1<<endl;
+		file1<<jobId<<" "<<d1<<" "<<d1+duration;
+	}
+	m1.unlock();
+}
+
+void Thread::thread2(){
 	ofstream file2;
 	file2.open("schedule2.txt");
 	try{
@@ -147,7 +156,15 @@ void Thread::thread1(){
 	}catch(...){
 		cout<<"invalid file";
 	}
-
+	m2.lock();
+	for(int i=0;i<=size(s2);i++)
+	{
+		cout<<s2<<endl;
+		file2<<jobId<<" "<<d2<<" "<<d2+duration;
+	}
+	m2.unlock();
+}
+void Thread::thread3(){
 	ofstream file3;
 	file3.open("schedule3.txt");
 	try{
@@ -156,20 +173,7 @@ void Thread::thread1(){
 	}catch(...){
 		cout<<"invalid file";
 	}
-	m1.lock();
-	for(int i=0;i<=size(s1);i++)
-	{
-		cout<<s1<<endl;
-		file1<<jobId<<" "<<d1<<" "<<d1+duration;
-	}
-	m1.unlock();
-	m2.lock();
-	for(int i=0;i<=size(s2);i++)
-	{
-		cout<<s2<<endl;
-		file2<<jobId<<" "<<d2<<" "<<d2+duration;
-	}
-	m2.unlock();
+	
 	m3.lock();
 	for(int i=0;i<=size(s3);i++)
 	{
@@ -177,6 +181,7 @@ void Thread::thread1(){
 		file3<<jobId<<" "<<d3<<d3+duration;
 	}
 	m3.unlock();
+}
 	file1.close();
 	file2.close();
 	file3.close();
