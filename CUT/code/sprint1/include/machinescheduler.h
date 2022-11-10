@@ -11,9 +11,9 @@ class MachineScheduler
 		int readInputFile(const char* inpFile);
 	private:
 		int d1=1;int d2=1;int d3=1;int d4=1;
-		array <Schedule1,MAX> s1;
-		array <Schedule2,MAX> s2;
-		array <Schedule3,MAX> s3;
+		extern array <Schedule1,MAX> s1;
+		extern array <Schedule2,MAX> s2;
+		extern array <Schedule3,MAX> s3;
 	
 
 };
